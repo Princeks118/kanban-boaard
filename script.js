@@ -78,8 +78,15 @@ columns.forEach((column)=>{
 // When you attach an event listener like this:
 function dragover(event){
     event.preventDefault();  // for some reason on deploying it wont workd as html bydeafult nature dondo drag and drop so remove it
-    this.appendChild(draggedCard);
+    // this.appendChild(draggedCard);
+    const afterElement=getDragAfterElement(this,event.pageY);
+    if(afterElement==null){
+        this.appendChild(draggedCard);
+    }
+    else {
+        this.insertBefore(draggedCard,afterElement);
 
+    }
     updateLocalStorage();
 }
 
@@ -164,6 +171,23 @@ function reset(){
 
 }
 
+// drag sorting logic
+
+
+f
+function getDragAfterElement(container, y) {
+    const draggableElements = [...container.querySelectorAll(".card:not(.dragging)")];
+    const result = draggableElements.reduce((closestElement, currentElement) => {
+        const box = currentElement.getBoundingClientRect();
+        const offset = y - box.top - box.height / 2;
+        if (offset < 0 && offset > closestElement.offset) {
+            return { offset: offset, element: currentElement };
+        } else {
+            return closestElement;
+        }
+    }, { offset: Number.NEGATIVE_INFINITY });
+    return result.element;
+}
 
 
 
