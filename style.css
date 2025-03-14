@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    margin-top: 150px;
+    margin-left:300px;
+    min-height: 100vh;
+    background-color: #222831;
+
+   
+}
+
+.board{
+    display: flex;
+    gap: 20px;
+}
+
+.column{
+    background-color: #393e46;
+    width: 300px;
+    min-height:500px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.column h2{
+    text-align: center;
+    color: #ffff;
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+}
+
+.task{
+ 
+    min-height: 300px;
+}
+
+.task-input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc ;
+    margin-top: 5px;
+   
+}
+
+.add-task{
+   width: 100%;
+   padding: 5px;
+   margin-top: 20px;
+   border-radius: 5px;
+   border: none;    
+   background-color: #d89216;
+   color: #fff;
+   font-weight: bold;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.add-task:hover{
+    background-color: #603d01;
+}
+
+.doing-input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc ;
+    margin-top: 5px;
+}
+
+.done-input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc ;
+    margin-top: 5px;
+}
+.card{
+    position: relative;
+    background-color: #e1d89f;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color: #000000;
+    cursor:grab;
+    transition: all 0.3s ease;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+
+.context-menu{
+    display: none;
+    position: absolute;
+    background-color: #ffff;
+    padding: 10px;
+    border-radius: 4px;
+   
+    
+}
+
+.context-menu ul li{
+    cursor: pointer;
+}
+
+.time{
+    
+    display: block;
+    font-style: italic;
+    font-size: 12px;
+    color: #222831;
+    text-align: end;
+
+
+}
+
+.clear-card{
+    margin-top: 40px;
+     margin-left: 300px;
+    background-color: #FF69B4;
+    width: 300px;
+    border-radius: 5px solid;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.clear-content {
+     text-align: center;
+}
+.clear-content h2{
+    font: italic;
+    font-weight: normal;
+}
+
+.reset-btn{
+    border-radius: 4px solid;
+    background-color: #FFC0CB;
+    width: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.reset-btn:hover{
+    transform: scale(2.08);
+}
